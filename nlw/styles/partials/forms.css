@@ -1,0 +1,48 @@
+
+.input-block,
+.textarea-block { 
+    position: relative;
+}
+
+.select-block label, /*estilizar a legenda do formulário*/
+.input-block label, 
+.textarea-block label {
+
+    font-size: 1.4rem;
+    color: var(--color-text-complement); 
+}
+
+.input-block input,
+.select-block select, 
+.textarea-block textarea {
+
+    width: 100%; /*largura das caixas do form*/ 
+    height: 5.6rem; /*altura das ciaxas do form*/
+    margin-top: 0.8rem; /*dar espaço entre as caixas do form*/
+    border-radius: 0.8rem;
+    background: var(--color-input-background);
+    border: 1px solid var(--color-line-in-white); 
+    outline: 0;
+    padding: 0 1.6rem; /*engordar as bordas*/
+    font: 1.6rem Archivo; 
+
+}
+
+.textarea-block textarea { 
+    padding: 1.2rem 1.6rem;
+    height: 16rem;
+
+    resize: vertical; /*mexer no tamanho da caixa de texto*/
+}
+
+.input-block:focus-within::after,
+.textarea-block:focus-within::after{ /*esta criando um elemento em html que vai aparecer na tela quando o input-block estiver selecionado*/
+     content:""; 
+
+     width: calc(100% - 3.2rem); /*calc esta sendo usado para fazer calculo com a largura*/
+     height: 2px;
+     background: var(--color-primary-light);
+     position: absolute; /*o elemento ficará na frente da página*/
+     left: 1.6rem; 
+     bottom: 0; 
+}
